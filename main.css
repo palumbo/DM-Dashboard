@@ -48,12 +48,13 @@ table, tr, th, td {
 
 #dice-ctn{ 
 	 border: 1px solid black; 
-	 width: 50px; 
+	 display: inline-block; 
 	 text-align: center; 
 	 padding: 10px; 
 	 font-family: cursive; 
 	 font-size: xx-large; 
 	 font-weight: 900;
+	 width: 125px; 
 }
 
 #crit { 
@@ -69,7 +70,25 @@ table, tr, th, td {
 }
 
 #d20 { 
+	width: 100px;
 	border: 1px solid black; 
-	padding: 10px 30px 10px 10px;
-	  
+	padding-right: 10px; 
+	padding-left: 10px; 
+	margin-bottom: 6px; 
+}
+
+#d8 { 
+	width: 100px; 
+	border: 1px solid black; 
+	padding-right: 10px; 
+	padding-left: 10px; 	
+	margin-top: 5px; 
+}
+
+#d6 { 
+	width: 100px; 
+	border: 1px solid black; 
+	margin-top: 5px; 
+	padding-right: 10px; 
+	padding-left: 10px; 
 }
