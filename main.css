@@ -67,3 +67,8 @@ table, tr, th, td {
 	 font-size: xx-large; 
 	 font-weight: 900;
 }
+
+#d20 { 
+	border: 1px solid black; 
+	margin; 10px; 
+}

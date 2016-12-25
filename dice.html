@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Dice Table</title>
+		<link href="main.css" rel="stylesheet" type="text/css" /> 
+	</head>
+	<body>
+		<div id="dice-ctn">
+			<div id="d20">
+				<button onclick="d20()">d20</button>
+				<span id="roll20"></span>
+			</div>
+		</div>
+	<script>
+		// setting variables
+		var ctn = document.getElementById("dice-ctn"); 
+		
+		// d20 function
+		function d20(){ 
+			var d20 = document.getElementById("d20"); 
+			var roll20 = document.getElementById("roll20"); 
+			var roll = Math.floor(Math.random() * 21); 
+			
+			// remove 0s
+			if (roll == 0) { 
+				roll = 1; 
+			}
+			
+			// change color on critical hit
+			if (roll == 20) { 
+				d20.style.backgroundColor = "red"; 
+				d20.style.color = "white"; 
+			} else { 
+				d20.style.backgroundColor = "white"; 
+				d20.style.color = "black"; 
+			}
+			
+			roll20.innerHTML = roll; 
+		}
+	</script>	
+	</body>
+</html>
