@@ -6,8 +6,16 @@
 	<body>
 		<div id="dice-ctn">
 			<div id="d20">
-				<button onclick="d20()">d20</button>
+				<button onclick="d20()">d20</button><br />
 				<span id="roll20"></span>
+			</div>
+			<div id="d8">
+				<button onclick="d8()">d8</button><br />
+				<span id="roll8"></span>
+			</div>
+			<div id="d6">
+				<button onclick="d6()">d6</button><br />
+				<span id="roll6"></span>
 			</div>
 		</div>
 	<script>
@@ -35,6 +43,35 @@
 			}
 			
 			roll20.innerHTML = roll; 
+		}
+		
+		// d8 function
+		function d8(){ 
+			// setting variables
+			var roll8 = document.getElementById("roll8"); 
+			var roll = Math.floor(Math.random() * 9); 
+			
+			// remove 0s
+			if (roll == 0) { 
+				roll = 1; 
+			}
+			
+			roll8.innerHTML = roll; 
+			
+		}; 
+		
+		// d6 function
+		function d6() { 
+			//setting variables 
+			var roll6 = document.getElementById("roll6"); 
+			var roll = Math.floor(Math.random() * 7); 
+			
+			// removes 0s
+			if (roll == 0) { 
+				roll = 1; 
+			}; 
+			
+			roll6.innerHTML = roll; 
 		}
 	</script>	
 	</body>
