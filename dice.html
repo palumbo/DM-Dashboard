@@ -10,13 +10,17 @@
 				<button onclick="d20()">d20</button><br />
 				<span id="roll20"></span>
 			</div>
-			<div id="d8">
-				<button onclick="d8()">d8</button><br />
-				<span id="roll8"></span>
+			<div id="d4">
+				<button onclick="d4()">d4</button><br /> 
+				<span id="roll4"></span>
 			</div>
 			<div id="d6">
 				<button onclick="d6()">d6</button><br />
 				<span id="roll6"></span>
+			</div>
+			<div id="d8">
+				<button onclick="d8()">d8</button><br />
+				<span id="roll8"></span>
 			</div>
 		</div>
 	<script>
@@ -73,6 +77,17 @@
 			}; 
 			
 			roll6.innerHTML = roll; 
+		}
+		
+		// d4 function
+		function d4(){
+			var roll = Math.floor(Math.random() * 5); 
+			var roll4 = document.getElementById("roll4"); 
+			
+			// remove 0s
+			if (roll == 0) { roll = 1; }; 
+			
+			roll4.innerHTML = roll; 
 		}
 	</script>	
 	</body>
