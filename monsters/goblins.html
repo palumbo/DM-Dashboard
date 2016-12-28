@@ -84,51 +84,30 @@
 		</div>
 	<hr /> 
 	<h2>Combat Tracker</h2>
+	<div id="form">
 	<form>
-	<div id="number">
-		<label for="monster-qty">Number of monsters</label>
-		<select id="monster-qty">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-		</select>
-	</div>
-	<div id="battlground">
-	</div>
-	<input type="text" id="goblin-name" placeholder="goblin name/location" size="20"/> 	<input type="number" id="goblin-hp" value="7" size="3" />
+		<div id="dropdown">
+			<label for="monster-quantity">Number of Monsters:</label>
+				<select id="monster-quantity">
+					<option value="">- select -</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+		</div>
 	</form>
-	<script>
-		var goblinHP = document.getElementById("goblin-hp"); 
-		var monsterQty = document.getElementById("monster-qty"); 
-		var battleground = document.getElementById("battleground"); 
-		
-		document.addEventListener("DOMContentLoaded", function(){
-			goblinHP.addEventListener("input", function(){ 
-				console.log("something happened"); 
-				if (goblinHP.value <= 0) { 
-					goblinHP.style.backgroundColor = "red"; 
-				} else { 
-					goblinHP.style.backgroundColor = "white"; 
-				};
-				
-			});
-			
-			monsterQty.addEventListener("input", function(){ 
-				for (var i = 0; i < monsterQty.value; i++) { 
-					var input = battleground.createElement("input");
-					input.setAttribute("type", "text"); 
-					input.setAttribute("id", "goblin-hp"); 
-				}
-				console.log(i); 
-			}) 
-		});  
-	</script>
+	<div id="battleground"></div>
+	<hr /> 
+	<div id="reset">
+		<button id="reset" onclick="location.reload()">Reset</button>
+	</div>
+	<script src="../_scripts/script.js"></script>
 	</body>
 </html>
