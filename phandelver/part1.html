@@ -25,6 +25,52 @@
 				</ol>
 				
 				<p><a href="index.html">Home</a><p>
+
+<!--
+		<div id="dice-ctn">
+			<div id="d20">
+				<button onclick="d20()">d20</button><br />
+				<span id="roll20"></span>
+			</div>
+			<div id="d8">
+				<button onclick="d8()">d8</button><br />
+				<span id="roll8"></span>
+			</div>
+			<div id="d6">
+				<button onclick="d6()">d6</button><br />
+				<span id="roll6"></span>
+			</div>
+			<div id="d4">
+				<button onclick="d4()">d4</button><br /> 
+				<span id="roll4"></span>
+			</div>
+		</div>
+-->
+
+
+		<div id="dice-table">
+			<table>
+				<tr>
+					<td>
+						<div id="d20"
+							<button onclick="d20()">d20</button><br />
+							<span id="roll20"></span>
+						</div>
+					</td>
+					<td>
+						<button onclick="d8()">d8</button><br>
+						<span id="roll8"></span>
+					</td>
+					<td>
+						<button onclick="d6()">d6</button><br /> 
+						<span id="roll6"></span>
+					</td>
+					<td>
+						<button onclick="d4()">d4</button><br /> 
+						<span id="roll4"></span>
+					</td>
+				</tr>
+			</table>
 		</div>
 		<p id="beginning">The adventure begins as the player characters are escorting a wagon full of provisions and supplies from Neverwinter to Phandalin. The journey takes them south along the High Road to the Triboar Trail, which heads east. When they're a half-day's march from Phandalin, they run into trouble with goblin raiders from Cragmaw tribe.</p>
 		<div class="dialogue">
@@ -150,6 +196,6 @@
 		<p>On a check result of 6-9, the character neither gains nor loses ground; on a result of 5 or less, the character falls and takes 1d6 bludgeoning damage per 10 feet fallen. landing prone at the base of the shaft.</p>
 		<h2 id="steep-passage">Steep Passage</h2>
 		<p>From this point on, characters without darkvision will need light to see their surroundings</p>
-		
+		<script src="../_scripts/dice.js"></script>
 		</body>
 		</html> 
