@@ -60,29 +60,33 @@ table, tr, th, td {
 #crit { 
 	color: white; 
 	background-color: red; 
-	 border: 1px solid black; 
-	 width: 50px; 
-	 text-align: center; 
-	 padding: 10px; 
-	 font-family: cursive; 
-	 font-size: xx-large; 
-	 font-weight: 900;
+	border: 1px solid black; 
+	width: 50px; 
+	text-align: center; 
+	padding: 10px; 
+	font-family: cursive; 
+	font-size: xx-large; 
+	font-weight: 900;
 }
 
 #d20 { 
-	width: 100px;
 	border: 1px solid black; 
+	text-align: center;
+	width: 100px;
 	padding-right: 10px; 
 	padding-left: 10px; 
-	margin-bottom: 6px; 
+	margin-bottom: 6px;
 }
 
+
 #d8 { 
+	text-align: center;
 	width: 100px; 
 	border: 1px solid black; 
 	padding-right: 10px; 
 	padding-left: 10px; 	
 	margin-top: 5px; 
+	
 }
 
 #d6 { 
@@ -91,6 +95,7 @@ table, tr, th, td {
 	margin-top: 5px; 
 	padding-right: 10px; 
 	padding-left: 10px; 
+	text-align: center;
 }
 
 #d4 { 
@@ -99,9 +104,31 @@ table, tr, th, td {
 	margin-top: 5px; 
 	padding-right: 10px; 
 	padding-left: 10px; 	
+	text-align: center;
 }
 
 .dead { 
 	color: white; 
 	background-color: red; 
+}
+
+#battleground input {
+	
+	font-size: small;
+	color: #333;
+	background: #eee;
+	border-radius: 3px;
+	transition: background 0.8s ease-in-out;
+	transition-delay: initial;
+}
+
+#reset button {  
+	color: white;
+	background-color: #555555;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

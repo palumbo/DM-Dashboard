@@ -24,7 +24,7 @@
 					<li><a href="steep-passage">Steep Passage</a></li>
 				</ol>
 				
-				<p><a href="index.html">Home</a><p>
+				<p><a href="../index.html">Home</a><p>
 
 <!--
 		<div id="dice-ctn">
@@ -51,21 +51,19 @@
 		<div id="dice-table">
 			<table>
 				<tr>
-					<td>
-						<div id="d20"
+					<td id="d20">
 							<button onclick="d20()">d20</button><br />
 							<span id="roll20"></span>
-						</div>
 					</td>
-					<td>
+					<td id="d8">
 						<button onclick="d8()">d8</button><br>
 						<span id="roll8"></span>
 					</td>
-					<td>
+					<td id="d6">
 						<button onclick="d6()">d6</button><br /> 
 						<span id="roll6"></span>
 					</td>
-					<td>
+					<td id="d4">
 						<button onclick="d4()">d4</button><br /> 
 						<span id="roll4"></span>
 					</td>
@@ -96,6 +94,29 @@
 		</ul>
 		<p>Total value of the cargo is 100 gp.</p>
 		<hr /> 
+		<div id="dice-table">
+			<table>
+				<tr>
+					<td id="d20">
+							<button onclick="d20()">d20</button><br />
+							<span id="roll20"></span>
+					</td>
+					<td id="d8">
+						<button onclick="d8()">d8</button><br>
+						<span id="roll8"></span>
+					</td>
+					<td id="d6">
+						<button onclick="d6()">d6</button><br /> 
+						<span id="roll6"></span>
+					</td>
+					<td id="d4">
+						<button onclick="d4()">d4</button><br /> 
+						<span id="roll4"></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+
 		<h2 id="goblin-ambush">Goblin Ambush</h2>
 		<div class="dialogue">
 			<p>You've been on the Triboar Trail for about half a day. As you come around a bend you spot two dead horses sprawled about 50 ft ahead of you, blocking the path. Each has several black-feathered arrows sticking out of it. The woods press close to the trail here, with a steep embankment and dense thickets on either side.</p>

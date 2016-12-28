@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Goblin</title>
+	<link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+<body>
+<div class="img-ctn">
+	<img src="../_images/goblin.jpg" />
+</div>
+<div class="monster">
+	<div class="monster-heading">
+		<hr /> 
+		<h3><span id="monster-name">Goblin</h3>
+		<h5>Small humanoid (goblinoid), neutral evil</h5>
+	</div>
+	<table>
+		<tr>
+			<th scope="row">Armor Class</th>
+			<td>15 (leather armor, shield)</td>
+		</tr>
+		<tr>
+			<th scope="row">Hit Points</th>
+			<td><span id="hp">7</span> (2d6)</td>
+		</tr>
+		<tr>
+			<th scope="row">Speed</th>
+			<td>30 ft.</td>
+		</tr>
+	</table>
+	<br /> 
+	<table class="abilities">
+		<tr>
+			<th scope="col">STR</th>
+				<th scope="col">DEX</th>
+				<th scope="col">CON</th>
+				<th scope="col">INT</th>
+				<th scope="col">WIS</th>
+				<th scope="col">CHA</th>
+		</tr>
+		<tr>
+				<td>8 (-1)</td>
+				<td>14 (+2)</td>
+				<td>10 (+0)</td>
+				<td>10 (+0)</td>
+				<td>8 (-1)</td>
+				<td>8 (-1)</td>
+		</tr>
+	</table>
+	<br /> 
+	<table class="info">
+		<tr>
+			<th scope="row">Skills</th>
+			<td>Steath +6</td>
+		</tr>
+		<tr>
+			<th scope="row">Senses</th>
+			<td>darkvision 60 ft., passive Perception 9</td>
+		</tr>
+		<tr>
+			<th scope="row">Languages</th>
+			<td>Common, Goblin</td>
+		</tr>
+		<tr>
+			<th scope="row">Challenge</th>
+			<td>1/4 (50 xp)</td>
+		</tr>
+	</table>
+	<p><b><i>Nimble Escape.</i></b> The goblin can take the <a href="../combat.html#disengage">Disengage</a>  or <a href="../combat.html#hide">Hide</a> action as a bonus action on each of its turns.</p>
+	<h3>Actions</h3>
+		<p><b><i>Scimitar.</i></b>
+			<ul>
+				<li>Melee Weapon Attack: +4 to hit, reach 5 ft, one target</li>
+				<li>Hit: 5 (1d6 + 2) slashing damage</li>
+			</ul>
+		</p>
+		<p><b><i>Shortbow</i></b>
+			<ul>
+				<li>Ranged Weapon Attack: +4 to hit, range 80/320 ft, one target</li>
+				<li>Hit: 5 (1d6 + 2) slashing damage</li>
+			</ul>
+		</p>
+		<p>Goblins are black-hearted, gather in overwhelming numbers, and crave power, which they abuse.</p>
+</div>
+	<hr /> 
+	<h2>Combat Tracker</h2>
+	<div id="form">
+		<form>
+			<div id="dropdown">
+				<label for="monster-quantity">Number of Monsters:</label>
+					<select id="monster-quantity">
+						<option value="">- select -</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+			</div>
+		</form>
+		<div id="battleground"></div>
+		<div id="reset">
+			<button onclick="location.reload()">Reset</button>
+		</div>
+		<hr /> 
+		<p><a href="../index.html">Home</a></p>
+	<script src="../_scripts/monster.js"></script>
+	</body>
+</html>
