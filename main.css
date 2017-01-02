@@ -3,11 +3,22 @@ body {
 	font-weight: 100; 
 }
 
+.header{
+	margin-bottom: -13px;
+}
+
 .main_title { 
 	padding-top: 10px; 
 	line-height: 80%; 
 }
 
+h4 { 
+	color: #555555;
+}
+
+.dead { 
+	background-color: red;
+}
 
 .ie { 
 	/* margin: auto; */
@@ -107,10 +118,6 @@ table, tr, th, td {
 	text-align: center;
 }
 
-.dead { 
-	color: white; 
-	background-color: red; 
-}
 
 #battleground input {
 	
@@ -132,3 +139,4 @@ table, tr, th, td {
     display: inline-block;
     font-size: 16px;
 }
+

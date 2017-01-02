@@ -1,44 +1,47 @@
-// setting GLOBAL variables
-	var monster = document.getElementById("monster-quantity"); 
-	var bg = document.getElementById("battleground"); 
+// setting global variables
+var monsterName = document.getElementById("monster-name"),
+	hp = document.getElementById('hp'),
+	bg = document.getElementById('battleground'),
+	qty = document.getElementById('monster-quantity');
 
-	function deathwatch(m){
-		m.addEventListener("input", function(){ 
-			console.log("something happened"); 
-			if (m.value <= 0) { 
-				m.style.backgroundColor = "red"; 
-			} else { 
-				m.style.backgroundColor = "white"; 
-			}
-		})
-	}
-	
-	// DOM event listerner
-	document.addEventListener("DOMContentLoaded", function(){ 
-		monster.addEventListener("input", function(){ 
-			console.log(monster.value); 
-			
-			var i; 
+function deathwatch(m){
+	m.addEventListener("input", function(){
+		console.log("input detected");
+		if (m.value <= 0) { 
+			m.style.backgroundColor = "red";
+		} else { 
+			m.style.backgroundColor = "white";
+		}
+	})
+};
 
-			for (i = 0; i < monster.value; i++) { 
-				var name = "name" + i; 
-				var nameid = "goblinName" + i;
-				name = document.createElement("input"); 
-				name.setAttribute("type", "text"); 
-				name.setAttribute("id", nameid);
-				name.setAttribute("size", "20");
-				name.setAttribute("placeholder", "Goblin Name/Location");  
-				bg.appendChild(name); 
-				var hp = "goblinHP" + i; 
-				var hpid = "golinHP" + i; 
-				hp = document.createElement("input"); 
-				hp.setAttribute("type", "number")
-				hp.setAttribute("id", hpid); 
-				hp.setAttribute("value", "7");
-				hp.setAttribute("onclick", "deathwatch(" + hpid + ")");
-				bg.appendChild(hp);
-				var br = document.createElement("br"); 
-				bg.appendChild(br);  
-			}
-		})	
-	}); 
+// DOM event listener
+document.addEventListener("DOMContentLoaded", function(){
+	qty.addEventListener("input", function(){
+		// test output
+		// console.log(monsterName.innerHTML + i);
+		
+		for (var i = 0; i < qty.value; i++) {
+			var name = "name" + i,
+				nameid = monsterName.innerHTML + i;
+			console.log(name, nameid); // testing output
+			name = document.createElement("input");
+			name.setAttribute("type", "text");
+			name.setAttribute("id", nameid);
+			name.setAttribute("size", "20");
+			name.setAttribute("placeholder", monsterName.innerHTML + " Name/Location");
+			bg.appendChild(name);
+			var dmg = monsterName.innerHTML + "HP" + i;
+			var hpid = dmg;
+			dmg = document.createElement("input");
+			dmg.setAttribute("type", "number");
+			dmg.setAttribute("id", hpid);
+			dmg.setAttribute("value", hp.innerHTML);
+			dmg.setAttribute("onclick", "deathwatch(" + hpid + ")");
+			bg.appendChild(dmg);
+			var br = document.createElement("br");
+			bg.appendChild(br);
+		}
+		
+	})
+})

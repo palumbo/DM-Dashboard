@@ -1,47 +1,70 @@
-// setting global variables
+//////////////////////////////
+// SETTING GLOBAL VARIABLES //
+//////////////////////////////
+
+var name = $("#monster-name").html(),
+	hp = $("#hp").html();
+
+
+
+// listening to select function
+$("select").change(function() {
+	var m = $(this).val(); 
+	console.log(m); 
+	 
+	for (var i = 1; i <= m; i++) { 
+		console.log(name + i); 
+		$("#battleground").append("<input type='text' size='20' placeholder='" + name + " Name/Location' id='" + name + "'>");
+		$("#battleground").append("<input type='number' value='7' id='" + name + "' class='dmg'>");
+		$("#battleground").append("<br>");
+	}
+	
+	$(".dmg").change(function(){
+		var h = $(this).val(); 
+		console.log(h); 
+		
+		if (h <= 0) { 
+			console.log("less than"); 
+			$(this).css("background-color", "red");  
+		} else { 
+			$(this).css("background-color", "#eee"); 
+		}
+	})
+})
+	
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////
+// PASTE BIN //
+///////////////
+
+/*
 var monsterName = document.getElementById("monster-name"),
 	hp = document.getElementById('hp'),
 	bg = document.getElementById('battleground'),
 	qty = document.getElementById('monster-quantity');
+*/
 
-function deathwatch(m){
-	m.addEventListener("input", function(){
-		console.log("input detected");
-		if (m.value <= 0) { 
-			m.style.backgroundColor = "red";
+
+/*
+$(".dmg").change(function() {
+		var h = $(this).val(); 			
+		console.log(hp);
+	
+		if (h <= 0) { 
+			$(this).addClass("dead");  
 		} else { 
-			m.style.backgroundColor = "white";
+			$(this).removeClass("dead"); 
 		}
 	})
-};
-
-// DOM event listener
-document.addEventListener("DOMContentLoaded", function(){
-	qty.addEventListener("input", function(){
-		// test output
-		// console.log(monsterName.innerHTML + i);
-		
-		for (var i = 0; i < qty.value; i++) {
-			var name = "name" + i,
-				nameid = monsterName.innerHTML + i;
-			console.log(name, nameid); // testing output
-			name = document.createElement("input");
-			name.setAttribute("type", "text");
-			name.setAttribute("id", nameid);
-			name.setAttribute("size", "20");
-			name.setAttribute("placeholder", monsterName.innerHTML + " Name/Location");
-			bg.appendChild(name);
-			var dmg = monsterName.innerHTML + "HP" + i;
-			var hpid = dmg;
-			dmg = document.createElement("input");
-			dmg.setAttribute("type", "number");
-			dmg.setAttribute("id", hpid);
-			dmg.setAttribute("value", hp.innerHTML);
-			dmg.setAttribute("onclick", "deathwatch(" + hpid + ")");
-			bg.appendChild(dmg);
-			var br = document.createElement("br");
-			bg.appendChild(br);
-		}
-		
-	})
-})
+*/
